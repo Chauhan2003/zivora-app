@@ -125,8 +125,8 @@ const NotificationPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col py-6 gap-4 items-center overflow-auto disableScrollbar">
-      <div className="w-md">
+    <div className="w-full flex flex-col py-6 gap-4 items-center overflow-auto disableScrollbar px-4 md:px-0">
+      <div className="w-full max-w-md">
         <FollowRequestsPreview />
 
         {/* Notification Sections */}

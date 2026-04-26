@@ -67,9 +67,9 @@ const ResetPasswordPage = () => {
   };
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-screen flex items-center justify-center px-4">
       <form
-        className="flex flex-col items-center gap-4 bg-white border border-gray-200 rounded-2xl shadow-lg p-8 w-sm text-center"
+        className="flex flex-col items-center gap-4 bg-white border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8 w-full max-w-sm text-center"
         onSubmit={handleResetPassword}
       >
         <Lock strokeWidth={1} size={100} />

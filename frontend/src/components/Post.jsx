@@ -33,7 +33,7 @@ const Post = ({ post }) => {
   const username = post?.user?.username || "Unknown User";
 
   return (
-    <div key={post._id} className="w-md flex flex-col gap-2 pb-4">
+    <div key={post._id} className="w-full max-w-md px-4 md:px-0 flex flex-col gap-2 pb-4">
       <div className="flex items-center gap-2">
         <img
           src={profileImage}

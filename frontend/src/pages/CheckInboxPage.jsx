@@ -5,8 +5,8 @@ const CheckInboxPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4 border rounded-2xl shadow-lg p-8 w-md text-center">
+    <div className="w-full h-screen flex items-center justify-center px-4">
+      <div className="flex flex-col items-center gap-4 border rounded-2xl shadow-lg p-6 sm:p-8 w-full max-w-md text-center">
         <img
           src={EmailIcon}
           className="w-36 object-contain mb-2"

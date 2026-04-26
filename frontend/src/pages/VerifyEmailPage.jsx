@@ -44,8 +44,8 @@ const VerifyEmailPage = () => {
   }, [token]);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4 border rounded-2xl shadow-lg p-8 w-sm text-center">
+    <div className="w-full h-screen flex items-center justify-center px-4">
+      <div className="flex flex-col items-center gap-4 border rounded-2xl shadow-lg p-6 sm:p-8 w-full max-w-sm text-center">
         <div className="text-center">
           <h1 className="font-bold text-lg">Verifying your email</h1>
           <p className="text-sm text-center text-gray-600">
