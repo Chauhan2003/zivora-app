@@ -181,15 +181,14 @@ const ProfilePage = () => {
                         )}
                       </button>
 
-                      {/* Message button - requires backend chat route */}
-                      {/* {followStatus === 2 && (
+                      {followStatus === 2 && (
                         <button
-                          className="w-24 h-[35px] text-base rounded-lg font-bold bg-[#212121] text-white flex items-center justify-center"
+                          className="w-24 h-[35px] text-base rounded-lg font-bold bg-gray-200 dark:bg-[#212121] text-foreground flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                           onClick={handleCreateChatMessage}
                         >
                           Message
                         </button>
-                      )} */}
+                      )}
                     </div>
                   )}
                 </div>

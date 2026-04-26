@@ -17,6 +17,7 @@ import CheckInboxPage from "./pages/CheckInboxPage";
 import NotificationPage from "./pages/NotificationPage";
 import SettingsEditProfilePage from "./pages/SettingsEditProfilePage";
 import SettingsAccountPrivacyPage from "./pages/SettingsAccountPrivacyPage";
+import MessagePage from "./pages/MessagePage";
 import { ThemeProvider } from "./context/themeContext.jsx";
 
 const App = () => {
@@ -51,6 +52,8 @@ const App = () => {
             <Route index element={<FeedPage />} />
             <Route path="search" element={<SearchPage />} />
             <Route path="profile/:username" element={<ProfilePage />} />
+            <Route path="message" element={<MessagePage />} />
+            <Route path="messages" element={<MessagePage />} />
             <Route path="notifications" element={<NotificationPage />} />
             <Route path="settings/edit" element={<SettingsEditProfilePage />} />
             <Route path="settings/privacy" element={<SettingsAccountPrivacyPage />} />

@@ -30,7 +30,7 @@ import { useTheme } from "../context/themeContext.jsx";
 const menuItems = [
   { label: "Home", icon: HOME_ICON, to: "/" },
   { label: "Search", icon: SEARCH_ICON, to: "/search" },
-  { label: "Messages", icon: MESSAGE_ICON, to: "/" },
+  { label: "Messages", icon: MESSAGE_ICON, to: "/message" },
   { label: "Notifications", icon: NOTIFICATION_ICON, to: "/notifications" },
 ];
 
@@ -61,22 +61,24 @@ const LeftSidebar = ({ collapsed = false }) => {
   return (
     <>
       <div
-        className="relative w-[72px] h-screen shrink-0"
+        className="relative w-[80px] h-screen shrink-0"
         onMouseEnter={() => collapsed && setHovered(true)}
         onMouseLeave={() => collapsed && setHovered(false)}
       >
         <div
           className={`absolute left-0 top-0 z-30 border-r bg-background py-8 px-2 flex flex-col items-center h-screen transition-all duration-300 ease-in-out overflow-hidden ${
-            isExpanded ? "w-[220px]" : "w-[72px]"
+            isExpanded ? "w-[220px]" : "w-[80px]"
           }`}
         >
-          <div className="w-full flex items-center gap-2 pl-1 mb-8">
+          <div className="w-full flex items-center gap-2 pl-3 mb-8">
             <div className="w-10 h-10 flex items-center justify-center shrink-0">
               <img src="/logo.png" alt="Zivora Logo" className="w-10 h-10" />
             </div>
             <h2
               className={`text-3xl font-bold shadows-into-light-regular whitespace-nowrap transition-all duration-300 ${
-                isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+                isCollapsed
+                  ? "opacity-0 w-0 overflow-hidden"
+                  : "opacity-100 w-auto"
               }`}
             >
               Zivora
@@ -100,7 +102,9 @@ const LeftSidebar = ({ collapsed = false }) => {
                 </span>
                 <span
                   className={`text-lg whitespace-nowrap transition-all duration-300 ${
-                    isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+                    isCollapsed
+                      ? "opacity-0 w-0 overflow-hidden"
+                      : "opacity-100 w-auto"
                   }`}
                 >
                   {label}
@@ -122,7 +126,9 @@ const LeftSidebar = ({ collapsed = false }) => {
               </span>
               <span
                 className={`whitespace-nowrap transition-all duration-300 ${
-                  isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+                  isCollapsed
+                    ? "opacity-0 w-0 overflow-hidden"
+                    : "opacity-100 w-auto"
                 }`}
               >
                 Create
@@ -143,7 +149,9 @@ const LeftSidebar = ({ collapsed = false }) => {
               </span>
               <span
                 className={`whitespace-nowrap transition-all duration-300 ${
-                  isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+                  isCollapsed
+                    ? "opacity-0 w-0 overflow-hidden"
+                    : "opacity-100 w-auto"
                 }`}
               >
                 Profile
@@ -162,7 +170,9 @@ const LeftSidebar = ({ collapsed = false }) => {
                 </span>
                 <span
                   className={`whitespace-nowrap transition-all duration-300 ${
-                    isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+                    isCollapsed
+                      ? "opacity-0 w-0 overflow-hidden"
+                      : "opacity-100 w-auto"
                   }`}
                 >
                   More
