@@ -60,8 +60,9 @@ const LeftSidebar = ({ collapsed = false }) => {
 
   return (
     <>
+      {/* Desktop / Tablet Sidebar (hidden on mobile) */}
       <div
-        className="relative w-[80px] h-screen shrink-0"
+        className="relative w-[80px] h-screen shrink-0 hidden md:block"
         onMouseEnter={() => collapsed && setHovered(true)}
         onMouseLeave={() => collapsed && setHovered(false)}
       >
@@ -205,6 +206,34 @@ const LeftSidebar = ({ collapsed = false }) => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
+      </div>
+
+      {/* Mobile Bottom Navigation Bar (visible only on mobile) */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-background border-t flex items-center justify-around px-2 py-2 md:hidden">
+        {menuItems.map(({ label, icon, to }) => (
+          <NavLink
+            key={label}
+            to={to}
+            className="flex flex-col items-center justify-center p-1.5 rounded-lg transition-colors"
+          >
+            <img src={icon} alt={`${label} icon`} className="w-6 h-6 dark:invert" />
+            <span className="text-[10px] mt-0.5">{label}</span>
+          </NavLink>
+        ))}
+        <button
+          onClick={() => setToggleCreatePost(true)}
+          className="flex flex-col items-center justify-center p-1.5 rounded-lg transition-colors"
+        >
+          <img src={ADD_ICON} alt="Add icon" className="w-6 h-6 dark:invert" />
+          <span className="text-[10px] mt-0.5">Create</span>
+        </button>
+        <NavLink
+          to={`/profile/${currentUser?.username}`}
+          className="flex flex-col items-center justify-center p-1.5 rounded-lg transition-colors"
+        >
+          <img src={profileImage} alt="profile" className="w-6 h-6 rounded-full" />
+          <span className="text-[10px] mt-0.5">Profile</span>
+        </NavLink>
       </div>
 
       {toggleCreatePost && (

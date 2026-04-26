@@ -143,7 +143,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="w-xs">
+    <div className="w-full max-w-xs">
       <h1 className="font-bold text-xl mb-4">Log In</h1>
 
       <form className="flex flex-col gap-3" onSubmit={handleLogin}>

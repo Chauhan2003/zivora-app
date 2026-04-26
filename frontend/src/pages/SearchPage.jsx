@@ -32,8 +32,8 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="w-full flex flex-col py-4 gap-2 items-center">
-      <div className="w-md">
+    <div className="w-full flex flex-col py-4 gap-2 items-center px-4 md:px-0">
+      <div className="w-full max-w-md">
         <InputGroup>
           <InputGroupInput
             placeholder="Search..."

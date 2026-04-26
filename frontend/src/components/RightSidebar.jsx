@@ -39,7 +39,7 @@ const RightSidebar = () => {
   };
 
   return (
-    <div className="p-4 flex flex-col items-center h-screen w-[320px] shrink-0">
+    <div className="p-4 flex-col items-center h-screen w-[320px] shrink-0 hidden lg:flex">
       <div className="flex items-center w-full gap-2 mb-6 bg-muted dark:bg-muted-foreground/20 p-3 rounded-lg">
         <img
           src={profileImage}
