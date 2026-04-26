@@ -8,6 +8,7 @@ import authRoutes from "./routes/auth.route.js";
 import postRoutes from "./routes/post.route.js";
 import userRoutes from "./routes/user.route.js";
 import notificationRoutes from "./routes/notification.route.js";
+import chatRoutes from "./routes/chat.route.js";
 import { errorHandler, notFoundHandler } from "./middlewares/errorHandler.middleware.js";
 
 const app = express();
@@ -38,6 +39,7 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/posts", postRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/notifications", notificationRoutes);
+app.use("/api/v1/chats", chatRoutes);
 
 // 404 handler
 app.use(notFoundHandler);

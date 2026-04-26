@@ -8,10 +8,10 @@ const MainLayout = () => {
 
   const isSettingsPage = location.pathname.startsWith("/settings");
   const isFeedPage = location.pathname === "/";
+  const isMessagePage = location.pathname.startsWith("/message");
 
   const showRightSidebar =
-    location.pathname.startsWith("/profile") ||
-    location.pathname.startsWith("/message");
+    location.pathname.startsWith("/profile") || isMessagePage;
 
   if (isSettingsPage) {
     return (
@@ -28,7 +28,7 @@ const MainLayout = () => {
   return (
     <div className="w-full h-screen flex">
       <LeftSidebar collapsed />
-      <div className={`flex-1 overflow-y-auto ${isFeedPage ? "disableScrollbar" : ""}`}>
+      <div className={`flex-1 ${isMessagePage ? "overflow-hidden" : "overflow-y-auto"} ${isFeedPage ? "disableScrollbar" : ""}`}>
         <Outlet />
       </div>
       {!showRightSidebar && <RightSidebar />}
