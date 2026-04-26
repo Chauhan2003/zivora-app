@@ -138,24 +138,24 @@ const ProfilePage = () => {
           <ProfileDataSkeleton />
         ) : (
           <>
-            <div className="flex justify-center w-full gap-16">
+            <div className="flex flex-col sm:flex-row items-center sm:justify-center w-full gap-6 sm:gap-16">
               <img
                 src={updatedProfileImage || "/profileImage.jpg"}
                 alt="Profile"
-                className="w-36 h-36 rounded-full object-cover cursor-pointer"
+                className="w-24 h-24 sm:w-36 sm:h-36 rounded-full object-cover cursor-pointer shrink-0"
                 onClick={() => isOwnProfile && setToggleEditProfileImage(true)}
               />
 
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center flex-wrap gap-4">
-                  <span className="text-2xl font-semibold">
+              <div className="flex flex-col gap-4 items-center sm:items-start w-full sm:w-auto">
+                <div className="flex items-center flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
+                  <span className="text-xl sm:text-2xl font-semibold">
                     {profileData?.username || "Unknown"}
                   </span>
                   {isOwnProfile ? (
                     <>
                       <button
                         onClick={() => navigate("/settings/edit")}
-                        className="w-28 h-[35px] text-base rounded-lg bg-[#292929] hover:bg-[#212121] font-bold text-white"
+                        className="w-28 h-[35px] text-sm sm:text-base rounded-lg bg-[#292929] hover:bg-[#212121] font-bold text-white"
                       >
                         Edit Profile
                       </button>
@@ -183,7 +183,7 @@ const ProfilePage = () => {
 
                       {followStatus === 2 && (
                         <button
-                          className="w-24 h-[35px] text-base rounded-lg font-bold bg-gray-200 dark:bg-[#212121] text-foreground flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
+                          className="w-24 h-[35px] text-sm sm:text-base rounded-lg font-bold bg-gray-200 dark:bg-[#212121] text-foreground flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
                           onClick={handleCreateChatMessage}
                         >
                           Message
@@ -193,20 +193,20 @@ const ProfilePage = () => {
                   )}
                 </div>
 
-                <div className="flex items-center gap-6">
-                  <div className="text-lg">
+                <div className="flex items-center gap-4 sm:gap-6">
+                  <div className="text-sm sm:text-lg text-center">
                     <span className="font-semibold">
                       {profileData?.profile?.postCount || "0"}
                     </span>{" "}
                     posts
                   </div>
-                  <div className="text-lg">
+                  <div className="text-sm sm:text-lg text-center">
                     <span className="font-semibold">
                       {profileData?.profile?.followerCount || "0"}
                     </span>{" "}
                     followers
                   </div>
-                  <div className="text-lg">
+                  <div className="text-sm sm:text-lg text-center">
                     <span className="font-semibold">
                       {profileData?.profile?.followingCount || "0"}
                     </span>{" "}
@@ -214,11 +214,11 @@ const ProfilePage = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-1">
-                  <span className="font-bold uppercase text-base">
+                <div className="flex flex-col gap-1 items-center sm:items-start">
+                  <span className="font-bold uppercase text-sm sm:text-base">
                     {profileData?.profile?.fullName || ""}
                   </span>
-                  <p className="max-w-xs text-base break-words">
+                  <p className="max-w-xs text-sm sm:text-base break-words text-center sm:text-left">
                     {profileData?.profile?.bio || ""}
                   </p>
                   {profileData?.profile?.website && (

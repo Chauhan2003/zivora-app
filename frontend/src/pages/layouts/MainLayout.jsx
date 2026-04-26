@@ -18,7 +18,7 @@ const MainLayout = () => {
       <div className="w-full h-screen flex">
         <LeftSidebar collapsed />
         <SettingsSidebar />
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto pb-16 md:pb-0">
           <Outlet />
         </div>
       </div>
@@ -28,7 +28,7 @@ const MainLayout = () => {
   return (
     <div className="w-full h-screen flex">
       <LeftSidebar collapsed />
-      <div className={`flex-1 ${isMessagePage ? "overflow-hidden" : "overflow-y-auto"} ${isFeedPage ? "disableScrollbar" : ""}`}>
+      <div className={`flex-1 ${isMessagePage ? "overflow-hidden" : "overflow-y-auto"} ${isFeedPage ? "disableScrollbar" : ""} ${isMessagePage ? "" : "pb-16 md:pb-0"}`}>
         <Outlet />
       </div>
       {!showRightSidebar && <RightSidebar />}

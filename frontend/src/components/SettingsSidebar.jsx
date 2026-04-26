@@ -11,7 +11,7 @@ const SettingsSidebar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="border-r h-screen flex flex-col py-8 px-4 w-[280px] shrink-0">
+    <div className="border-r h-screen flex-col py-8 px-4 w-[280px] shrink-0 hidden md:flex">
       <h2 className="text-2xl font-bold mb-6 px-2">Settings</h2>
 
       {/* Search */}
